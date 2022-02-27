@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie!!! Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        #spinner {
+            display: none;
+            color: rgb(255, 115, 0);
+        }
+
+        .text-color {
+            margin-top: 20px;
+            color: brown;
+        }
+
+        .text-color2 {
+            color: crimson;
+        }
+
+        .body-color {
+            background-color: rgba(240, 255, 255, 0.349);
+            margin-bottom: 100px;
+        }
+
+        #results-error {
+            margin-top: 180px;
+        }
+    </style>
+</head>
+
+<body class="body-color container">
+    <h1 class="text-center text-color mt-5">Foodie!!! <span class="text-color2">Online</span></h1>
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input id="search-field" type="text" class="form-control mt-3" placeholder="search your food here"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="searchFood()" class="btn btn-outline-secondary mt-3 bg-primary text-white" type="button"
+            id="button-seacrh">search</button>
+    </div>
+    <!-- spinner -->
+    <div class="text-center my-5" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- no result error -->
+    <div id="results-error">
+        <h2 id="results-error" class="text-center text-danger">Your searched item is not found. Please type valid item
+            name</h2>
+    </div>
+    <!-- 404 error result -->
+    <div id="errors" class="text-center mx-auto text-danger mt-5">
+    </div>
+    <!-- single meal detail -->
+    <div id="meal-details" class="w-50 mx-auto mb-5">
+
+    </div>
+    <!-- meal search result -->
+    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 container">
+
+    </div>
+    <!-- <div id="meals" class="row row-cols-1 row-cols-md-3 g-4 container">
+
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/meal-db.js"></script>
+</body>
+
+</html>
