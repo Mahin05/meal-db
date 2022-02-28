@@ -24,7 +24,7 @@ const searchFood = () => {
     // console.log(searchText);
     else {
         const mealDetails = document.getElementById('meal-details');
-        mealDetails.innerHTML = '';
+        mealDetails.textContent = '';
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
         fetch(url)
             .then(res => res.json())
@@ -106,6 +106,7 @@ const displayMealDetail = meal => {
     // console.log(meals);{
     console.log(meal.idMeal);
     const mealDetails = document.getElementById('meal-details');
+    mealDetails.textContent = '';
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
